@@ -17,15 +17,15 @@ User = get_user_model()
 def users_list(request):
     users = Profile.objects.exclude(user=request.user)
     sent_friend_requests = FriendRequest.objects.filter(from_user=request.user)
+    my_friends = request.user.profile.friends.all()
     sent_to = []
     friends = []
-    for user in users:
+    for user in my_friends:
         friend = user.friends.all()
         for f in friend:
             if f in friends:
                 friend = friend.exclude(user=f.user)
         friends += friend
-    my_friends = request.user.profile.friends.all()
     for i in my_friends:
         if i in friends:
             friends.remove(i)

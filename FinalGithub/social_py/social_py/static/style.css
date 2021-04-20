@@ -1,5 +1,17 @@
 body {
     background: #ffffff !important;
+    position: relative;
+}
+
+.wallpaper-wrapper {
+    background-image: url('guild-backdrop.jpg') !important;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .ui.container {
@@ -25,7 +37,7 @@ body {
 
 .ui.fluid.card, .ui.segment {
     background: rgb(213,205,180) !important;
-    background: radial-gradient(circle, rgba(213,205,180,0.8) 0%, rgba(179,156,126,0.8) 88%, rgba(149,135,116,0.8) 100%) !important;
+    background: radial-gradient(circle, rgba(213,205,180,0.95) 0%, rgba(179,156,126,0.95) 88%, rgba(149,135,116,0.95) 100%) !important;
     /* background-image: url('parchment-card.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
@@ -36,7 +48,7 @@ body {
 }
 
 .card-header {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
 }
 

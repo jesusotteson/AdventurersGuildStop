@@ -37,7 +37,8 @@ body {
 
 .ui.fluid.card, .ui.segment {
     background: rgb(213,205,180) !important;
-    background: radial-gradient(circle, rgba(213,205,180,0.95) 0%, rgba(179,156,126,0.95) 88%, rgba(149,135,116,0.95) 100%) !important;
+    background: radial-gradient(circle, rgba(213,205,180,0.97) 0%, rgba(179,156,126,0.97) 88%, rgba(149,135,116,0.97) 100%) !important;
+    box-shadow: 5px 5px 15px #222, -5px -5px 15px #222;
     /* background-image: url('parchment-card.jpg');
     background-repeat: no-repeat;
     background-size: cover; */

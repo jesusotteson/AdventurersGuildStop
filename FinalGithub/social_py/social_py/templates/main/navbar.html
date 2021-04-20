@@ -6,6 +6,7 @@
 {% url 'profiles:all-profiles-view' as path_to_all_profiles %}
 
 <div class="ui inverted menu nav mb-7">
+    <div class="nav-background"></div>
   <div class="ui container">
     <a href="{{path_to_home}}" class="{% if request.path == path_to_home %}active{% endif %} item">
         <h3>Adventurers Guild Stop</h3>
@@ -19,7 +20,7 @@
     <div class="right menu">
         {% if request.user.is_authenticated %}
         <div class="item">
-            <div class="ui floating dropdown icon button teal"> Friends
+            <div class="ui floating dropdown icon button red"> Friends
                 <i class="dropdown icon"></i>
                 <div class="menu">
                     <a href="{{path_to_all_profiles}}" class="{% if request.path == path_to_all_profiles %}active{% endif %} item">
@@ -29,7 +30,7 @@
                         Send Invites
                     </a>
                     <a href="{{path_to_my_invites}}" class="{% if request.path == path_to_my_invites %}active{% endif %} item">
-                        Received Invites &nbsp; <div class="ui purple horizontal label">{{invites_num}}</div>
+                        Received Invites &nbsp; <div class="ui red horizontal label">{{invites_num}}</div>
                     </a>
                 </div>
              </div>
@@ -45,7 +46,7 @@
             </div>
         
             <a href="{{path_to_my_profile}}" class="{% if request.path == path_to_my_profile %}active{% endif %} item">
-                <img src={{picture.url}} >&nbsp;
+                <img src={{picture.url}} alt={{request.user|add:"profile picture"}}>&nbsp;
                  {{ request.user }}
             </a>
 

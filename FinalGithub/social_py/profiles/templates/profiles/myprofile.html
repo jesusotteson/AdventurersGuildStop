@@ -38,13 +38,13 @@ my profile
     {% if confirm %}
         <div class="ui green message">Your profile has been updated</div>
     {% endif %}
-    <h3>my profile: {{request.user}}</h3>
+    <h3>My profile: {{request.user}}</h3>
     <div class="ui grid">
         <div class='row'>
             <div class='six wide column'>
                 <img class="ui medium rounded image" src={{profile.avatar.url}}>
                 <div class="row mt-5">
-                    <button class='ui secondary button' id='modal-btn'>Update your profile</button>
+                    <button class='ui primary button' id='modal-btn'>Update your profile</button>
                 </div>
             </div>
             <div class="ten wide column">

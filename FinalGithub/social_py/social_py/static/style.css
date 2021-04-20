@@ -1,10 +1,16 @@
 body {
-    background: #ffffff !important;
+    background: #000 !important;
     position: relative;
+    color: white
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white
 }
 
 .wallpaper-wrapper {
     background-image: url('guild-backdrop.jpg') !important;
+    opacity: 0.55;
     background-size: cover;
     position: fixed;
     top: 0;
